@@ -2,22 +2,12 @@
 
 A clean-room AI-OS template built top down for current Claude Code.
 
-This repo deliberately does **not** copy the structure of `Test-environment-`. That repo is a laboratory containing Charlie-specific projects, research, scripts, dashboards and historical experiments. Kit-v1 starts from current platform capabilities and adds complexity only when a test proves it is needed.
+`Test-environment-` remains the laboratory. `Kit-v1` does not copy its Charlie-specific projects, creator corpora, dashboards, historical audits, named agents or custom orchestration.
 
-## Design order
-
-1. Current Anthropic / Claude Code documentation.
-2. Boris Cherny's current Claude Code workflow and public guidance.
-3. Andrej Karpathy's current context, agent and verification guidance.
-4. Nate Herk's modern Claude-native material (roughly 20 primary videos).
-5. Older material only where the principle still survives the current platform.
-6. Our own additions only after a measurable gap appears.
-
-## Base template
+## Current base
 
 ```
 AGENTS.md
-CLAUDE.md
 context/
   about-me.md
   current-focus.md
@@ -25,23 +15,29 @@ projects/
   README.md
 .claude/
   settings.json
-research/
-  source-map.md
-  boris-cherny.md
-  andrej-karpathy.md
-  nate-modern.md
-  anthropic-current.md
-design/
-  principles.md
-  test-environment-review.md
 ```
 
-Research and design files are development evidence for this experiment. A finished beginner template may be smaller.
+That is the candidate day-one system.
 
-## Knowledge is external
+The `research/` and `design/` folders in this repository are evidence used while developing and testing the template. They are not automatically part of the finished beginner kit.
 
-Raw creator transcripts are not part of the AI-OS template. Charlie's portable transcript archive lives in `eddieedwardsv2-ux/eddie-ed`. A future user's AI-OS should connect to that user's own knowledge sources instead of inheriting Charlie's corpus.
+## Why there is no CLAUDE.md
 
-## Current status
+Current Claude Code can read `AGENTS.md` directly when a project has no `CLAUDE.md`. We therefore use one shared instruction file rather than maintaining a compatibility bridge. Older Claude Code versions can be handled as a compatibility case only if testing shows we still need it.
 
-Foundation research pass started 2026-10-10. No claim is made yet that this structure is the final template. It must beat the existing template on fresh-session routing, context size, task completion and verification before promotion.
+## Evidence order
+
+1. Current Anthropic / Claude Code documentation.
+2. Boris Cherny's current Claude Code workflow.
+3. Andrej Karpathy's current context, agent and verification guidance.
+4. Nate Herk's modern Claude-native material.
+5. Older material only where the principle still survives current platform capabilities.
+6. Our additions only after a measured gap appears.
+
+## Knowledge stays external
+
+Raw creator transcripts live in `eddieedwardsv2-ux/eddie-ed`. A reusable AI-OS should not ship Charlie's research corpus. A user's own knowledge can be attached later when their work actually needs it.
+
+## Promotion rule
+
+This becomes the new template only if it equals or beats the old system on fresh-session routing, context retrieval, task completion, verification, safety and continuity while using materially less always-loaded context and less architecture.
