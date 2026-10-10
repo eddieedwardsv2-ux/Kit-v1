@@ -13,13 +13,18 @@ context/
   current-focus.md
 projects/
   README.md
+capabilities/
+  README.md
+  starter-stack.md
+  selection-guide.md
+  catalog.md
 .claude/
   settings.json
 ```
 
 That is the candidate day-one system.
 
-The `research/` and `design/` folders in this repository are evidence used while developing and testing the template. They are not automatically part of the finished beginner kit.
+`capabilities/` is part of the reusable kit: it gives a new user a self-contained, curated route to the best native features, Skills, MCPs and plugins without access to Test-environment. The `research/` and `design/` folders are development evidence and may be removed from the finished beginner distribution.
 
 ## Why there is no CLAUDE.md
 
